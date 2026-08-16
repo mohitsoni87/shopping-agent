@@ -8,9 +8,9 @@ class ChatRequest(BaseModel):
 
 
 class ChatResponse(BaseModel):
-    search_id: str
     answer: str
-    results: list[ProductResult]
-    offset: int
-    limit: int
-    has_more: bool
+    search_id: str | None = None
+    results: list[ProductResult] = []
+    offset: int = 0
+    limit: int = 0
+    has_more: bool = False

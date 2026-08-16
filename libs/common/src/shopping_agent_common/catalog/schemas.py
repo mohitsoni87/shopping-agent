@@ -1,5 +1,7 @@
 from pydantic import BaseModel, Field
 
+from shopping_agent_common.product_types import Gender
+
 
 class ItemUpsert(BaseModel):
     external_item_id: str
@@ -14,6 +16,7 @@ class ProductUpsert(BaseModel):
     title: str
     description: str
     category: str | None = None
+    gender: Gender | None = None
     image_url: str | None = None
     attributes: dict = Field(default_factory=dict)
     items: list[ItemUpsert] = Field(default_factory=list)

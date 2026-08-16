@@ -14,7 +14,7 @@ export interface ProductResult {
 }
 
 export interface ChatResponse {
-  search_id: string;
+  search_id: string | null;
   answer: string;
   results: ProductResult[];
   offset: number;
@@ -33,7 +33,7 @@ export interface ChatMessage {
   id: string;
   role: "user" | "assistant";
   text: string;
-  searchId?: string;
+  searchId?: string | null;
   results?: ProductResult[];
   offset?: number;
   limit?: number;

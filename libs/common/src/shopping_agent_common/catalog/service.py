@@ -38,6 +38,7 @@ class CatalogService:
         product.title = payload.title
         product.description = payload.description
         product.category = payload.category
+        product.gender = payload.gender
         product.image_url = payload.image_url
         product.attributes = payload.attributes
         product.embedding = embedding

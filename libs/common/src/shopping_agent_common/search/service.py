@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
 
+from shopping_agent_common.product_types import Gender
 from shopping_agent_common.repositories import ItemFilters, ItemRepository, ProductRepository
 from shopping_agent_common.search.schemas import ItemMatch, ProductMatch, SearchPage
 
@@ -21,6 +22,7 @@ class SearchService:
         query_embedding: list[float],
         item_filters: ItemFilters,
         category: str | None = None,
+        gender: Gender | None = None,
         limit: int = 5,
         offset: int = 0,
     ) -> SearchPage:
@@ -33,6 +35,7 @@ class SearchService:
             env=env,
             query_embedding=query_embedding,
             category=category,
+            gender=gender,
             has_matching_item=has_matching_item,
             limit=limit + 1,
             offset=offset,

@@ -28,6 +28,7 @@ def get_search_page(
         query_embedding=search_session.query_embedding,
         item_filters=search_session.item_filters,
         category=search_session.category,
+        gender=search_session.gender,
         limit=limit,
         offset=offset,
     )

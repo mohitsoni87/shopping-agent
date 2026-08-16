@@ -4,6 +4,7 @@
     "title": "Wool-Blend Field Jacket",
     "description": "A warm red wool-blend jacket with a corduroy collar, built for crisp fall weather.",
     "category": "outerwear",
+    "gender": "unisex",
     "image_url": "https://images.unsplash.com/photo-1639835648750-c1d6ad50c6a9?w=400&h=400&fit=crop",
     "attributes": {
       "season": "fall",
@@ -38,6 +39,7 @@
     "title": "Quilted Puffer Jacket",
     "description": "A lightweight quilted puffer jacket with a packable hood, ideal for cold winter days.",
     "category": "outerwear",
+    "gender": "unisex",
     "image_url": "https://images.pexels.com/photos/8170867/pexels-photo-8170867.jpeg",
     "attributes": {
       "season": "winter",
@@ -65,6 +67,7 @@
     "title": "Denim Trucker Jacket",
     "description": "A classic denim trucker jacket with button front, a year-round layering staple.",
     "category": "outerwear",
+    "gender": "unisex",
     "image_url": "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=400&h=400&fit=crop",
     "attributes": {
       "material": "denim"
@@ -91,6 +94,7 @@
     "title": "Leather Straight-Leg Jeans",
     "description": "Faux-leather straight-leg jeans with a mid-rise fit, works year-round.",
     "category": "bottoms",
+    "gender": "women",
     "image_url": "https://images.unsplash.com/photo-1748853241661-8924b92bd687?w=400&h=400&fit=crop",
     "attributes": {
       "material": "faux-leather"
@@ -117,6 +121,7 @@
     "title": "Slim-Fit Stretch Jeans",
     "description": "Slim-fit jeans with a touch of stretch for all-day comfort, everyday denim.",
     "category": "bottoms",
+    "gender": "men",
     "image_url": "https://images.unsplash.com/photo-1714143136372-ddaf8b606da7?w=400&h=400&fit=crop",
     "attributes": {
       "material": "cotton-stretch"
@@ -150,6 +155,7 @@
     "title": "Cargo Utility Pants",
     "description": "Relaxed-fit cargo pants with multiple pockets, durable and practical.",
     "category": "bottoms",
+    "gender": "unisex",
     "image_url": "https://images.pexels.com/photos/16983209/pexels-photo-16983209.jpeg",
     "attributes": {
       "material": "cotton-twill"
@@ -176,6 +182,7 @@
     "title": "Basic Cotton Crew Tee",
     "description": "A soft, everyday cotton crew-neck t-shirt in classic colors.",
     "category": "tops",
+    "gender": "unisex",
     "image_url": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&h=400&fit=crop",
     "attributes": {
       "material": "cotton"
@@ -202,6 +209,7 @@
     "title": "Flannel Button-Down Shirt",
     "description": "A soft brushed-flannel button-down in a classic plaid, warm and casual.",
     "category": "tops",
+    "gender": "men",
     "image_url": "https://images.unsplash.com/photo-1613332658633-551aef234b70?w=400&h=400&fit=crop",
     "attributes": {
       "season": "fall",
@@ -229,6 +237,7 @@
     "title": "Silk Blouse",
     "description": "A lightweight silk blouse with a relaxed fit, polished enough for the office.",
     "category": "tops",
+    "gender": "women",
     "image_url": "https://images.unsplash.com/photo-1718278864585-3c962e452710?w=400&h=400&fit=crop",
     "attributes": {
       "material": "silk"
@@ -255,6 +264,7 @@
     "title": "Classic Canvas Sneakers",
     "description": "Low-top canvas sneakers with a rubber sole, casual everyday wear.",
     "category": "footwear",
+    "gender": "unisex",
     "image_url": "https://images.unsplash.com/photo-1758646483134-1a5cbc9aa349?w=400&h=400&fit=crop",
     "attributes": {
       "material": "canvas"
@@ -281,6 +291,7 @@
     "title": "Leather Chelsea Boots",
     "description": "Sleek leather Chelsea boots with an elastic side panel, versatile for any outfit.",
     "category": "footwear",
+    "gender": "unisex",
     "image_url": "https://images.unsplash.com/photo-1777987601423-f350ac29b3e9?w=400&h=400&fit=crop",
     "attributes": {
       "material": "leather"
@@ -307,6 +318,7 @@
     "title": "Floral Wrap Dress",
     "description": "A lightweight floral wrap dress, flattering fit, great for spring and summer.",
     "category": "dresses",
+    "gender": "women",
     "image_url": "https://images.unsplash.com/photo-1502868354157-ec2edd2a1651?w=400&h=400&fit=crop",
     "attributes": {
       "season": "spring"
@@ -333,6 +345,7 @@
     "title": "Little Black Dress",
     "description": "A timeless fitted black dress, easy to dress up or down for any occasion.",
     "category": "dresses",
+    "gender": "women",
     "image_url": "https://images.unsplash.com/photo-1780765467127-5073b05d28c1?w=400&h=400&fit=crop",
     "attributes": {},
     "items": [
@@ -357,6 +370,7 @@
     "title": "Wool Knit Scarf",
     "description": "A chunky wool knit scarf, warm and cozy for cold winter days.",
     "category": "accessories",
+    "gender": "unisex",
     "image_url": "https://images.unsplash.com/photo-1737043818804-5b2654929779?w=400&h=400&fit=crop",
     "attributes": {
       "season": "winter",
@@ -377,6 +391,7 @@
     "title": "Leather Crossbody Bag",
     "description": "A compact leather crossbody bag with an adjustable strap, fits the everyday essentials.",
     "category": "accessories",
+    "gender": "unisex",
     "image_url": "https://images.unsplash.com/photo-1760624294699-3d3156314391?w=400&h=400&fit=crop",
     "attributes": {
       "material": "leather"

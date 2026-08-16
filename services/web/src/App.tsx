@@ -94,6 +94,7 @@ export default function App() {
           <div key={message.id} className={`message message--${message.role}`}>
             <div className="message__bubble">{message.text}</div>
             {message.role === "assistant" &&
+              message.searchId &&
               message.results &&
               message.offset != null && (
                 <ProductGrid

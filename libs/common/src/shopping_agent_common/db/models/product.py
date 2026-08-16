@@ -27,6 +27,7 @@ class Product(Base):
     title: Mapped[str]
     description: Mapped[str]
     category: Mapped[str | None]
+    gender: Mapped[str | None]
     image_url: Mapped[str | None]
     attributes: Mapped[dict] = mapped_column(JSONB, default=dict)
     embedding: Mapped[list[float] | None] = mapped_column(Vector(_embedding_dim))

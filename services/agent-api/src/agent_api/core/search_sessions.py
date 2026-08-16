@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 
 from cachetools import TTLCache
+from shopping_agent_common.product_types import Gender
 from shopping_agent_common.repositories import ItemFilters
 
 
@@ -18,6 +19,7 @@ class SearchSession:
     query_embedding: list[float]
     item_filters: ItemFilters
     category: str | None
+    gender: Gender | None
 
 
 class SearchSessionStore:

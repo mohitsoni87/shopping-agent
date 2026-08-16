@@ -9,6 +9,7 @@ CREATE TABLE product (
     title                TEXT NOT NULL,
     description          TEXT NOT NULL,
     category             TEXT,
+    gender               TEXT,
     image_url            TEXT,
     attributes           JSONB NOT NULL DEFAULT '{}'::jsonb,
     embedding            VECTOR(1024),

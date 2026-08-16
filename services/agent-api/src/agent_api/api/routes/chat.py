@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends
+from langchain_core.messages import HumanMessage
 from langgraph.graph.state import CompiledStateGraph
 from shopping_agent_common.tenancy import TenantContext
 
@@ -16,13 +17,17 @@ def chat(
     graph: CompiledStateGraph = Depends(get_compiled_graph),
 ) -> ChatResponse:
     final_state = graph.invoke(
-        {"tenant_id": tenant.tenant_id, "env": tenant.env, "user_query": payload.query}
+        {
+            "tenant_id": tenant.tenant_id,
+            "env": tenant.env,
+            "messages": [HumanMessage(content=payload.query)],
+        }
     )
     return ChatResponse(
-        search_id=final_state["search_id"],
-        answer=final_state["answer"],
-        results=final_state["results"],
+        answer=final_state["messages"][-1].content,
+        search_id=final_state.get("search_id"),
+        results=final_state.get("results", []),
         offset=0,
         limit=get_agent_settings().search_top_k,
-        has_more=final_state["has_more"],
+        has_more=final_state.get("has_more", False),
     )

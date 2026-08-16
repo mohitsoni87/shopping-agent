@@ -1,20 +1,18 @@
-from langgraph.graph import END, StateGraph
+from langgraph.graph import StateGraph
+from langgraph.prebuilt import ToolNode, tools_condition
 
-from agent_api.graph.nodes import embed_node, parse_query, respond, retrieve
+from agent_api.graph.nodes import agent_node
 from agent_api.graph.state import AgentState
+from agent_api.graph.tools import search_products
 
 
 def build_graph():
     graph = StateGraph(AgentState)
-    graph.add_node("parse_query", parse_query)
-    graph.add_node("embed_query", embed_node)
-    graph.add_node("retrieve", retrieve)
-    graph.add_node("respond", respond)
+    graph.add_node("agent", agent_node)
+    graph.add_node("tools", ToolNode([search_products]))
 
-    graph.set_entry_point("parse_query")
-    graph.add_edge("parse_query", "embed_query")
-    graph.add_edge("embed_query", "retrieve")
-    graph.add_edge("retrieve", "respond")
-    graph.add_edge("respond", END)
+    graph.set_entry_point("agent")
+    graph.add_conditional_edges("agent", tools_condition)
+    graph.add_edge("tools", "agent")
 
     return graph.compile()
