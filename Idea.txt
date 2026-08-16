@@ -1,0 +1,25 @@
+You're a Senior Principal Engineer, we are discussing to create a new LangGraph project>
+
+Idea is There are many clothing brands such as Zara, H&M, and many more, they don't have a Agentic Chat that can help user query to find anything via Natural Language.
+
+For e.g. 
+Find me good red color jacket that is suitable for the Fall season.
+Find me leather jeans of size 32
+
+The application will be multi-tenanted i.e. different customers will have their own database schema for products and items.
+
+We will leverage our Feature Store which will have 2 tables
+Product table
+Product_id, descripton, embedding using which we will map the user's query to find the actual product
+Items table
+product_id, item_id, size, color, stock
+
+Basically one shirt can have different sizes and colors, thus 2 tables, product and items table.
+
+Now, there will be 3 flows overall.
+
+1. Whenever the customer updates its inventory i.e. updated description of product, increased inventory or a new product overall. In this case, there will be a Webhook API to our Service which will update the Feature Store, update the embeddings in product table and also the items table.
+2. To onboard a new customer, we will have a multi-tenanted ETL pipeline that will ingest all the product and items for our customers into the Feature Store.
+3. Agentic Flow: User queries go via our agent, query the FS, and display the result in the chat on the customers env
+
+Agenda: do not start writing code, let's discuss the design first, including scalability, multi-tenancyand all of the important factors.

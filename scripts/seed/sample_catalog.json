@@ -1,0 +1,394 @@
+[
+  {
+    "external_product_id": "sku-jacket-001",
+    "title": "Wool-Blend Field Jacket",
+    "description": "A warm red wool-blend jacket with a corduroy collar, built for crisp fall weather.",
+    "category": "outerwear",
+    "image_url": "https://images.unsplash.com/photo-1639835648750-c1d6ad50c6a9?w=400&h=400&fit=crop",
+    "attributes": {
+      "season": "fall",
+      "material": "wool-blend"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-jacket-001-s-red",
+        "size": "S",
+        "color": "red",
+        "price": 129.99,
+        "stock": 12
+      },
+      {
+        "external_item_id": "sku-jacket-001-m-red",
+        "size": "M",
+        "color": "red",
+        "price": 129.99,
+        "stock": 8
+      },
+      {
+        "external_item_id": "sku-jacket-001-l-red",
+        "size": "L",
+        "color": "red",
+        "price": 129.99,
+        "stock": 5
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-jacket-007",
+    "title": "Quilted Puffer Jacket",
+    "description": "A lightweight quilted puffer jacket with a packable hood, ideal for cold winter days.",
+    "category": "outerwear",
+    "image_url": "https://images.pexels.com/photos/8170867/pexels-photo-8170867.jpeg",
+    "attributes": {
+      "season": "winter",
+      "material": "polyester"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-jacket-007-s-navy",
+        "size": "S",
+        "color": "navy",
+        "price": 149.0,
+        "stock": 10
+      },
+      {
+        "external_item_id": "sku-jacket-007-m-navy",
+        "size": "M",
+        "color": "navy",
+        "price": 149.0,
+        "stock": 14
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-jacket-008",
+    "title": "Denim Trucker Jacket",
+    "description": "A classic denim trucker jacket with button front, a year-round layering staple.",
+    "category": "outerwear",
+    "image_url": "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "denim"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-jacket-008-m-blue",
+        "size": "M",
+        "color": "blue",
+        "price": 89.0,
+        "stock": 18
+      },
+      {
+        "external_item_id": "sku-jacket-008-l-blue",
+        "size": "L",
+        "color": "blue",
+        "price": 89.0,
+        "stock": 11
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-jeans-002",
+    "title": "Leather Straight-Leg Jeans",
+    "description": "Faux-leather straight-leg jeans with a mid-rise fit, works year-round.",
+    "category": "bottoms",
+    "image_url": "https://images.unsplash.com/photo-1748853241661-8924b92bd687?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "faux-leather"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-jeans-002-30-black",
+        "size": "30",
+        "color": "black",
+        "price": 89.5,
+        "stock": 4
+      },
+      {
+        "external_item_id": "sku-jeans-002-32-black",
+        "size": "32",
+        "color": "black",
+        "price": 89.5,
+        "stock": 10
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-jeans-009",
+    "title": "Slim-Fit Stretch Jeans",
+    "description": "Slim-fit jeans with a touch of stretch for all-day comfort, everyday denim.",
+    "category": "bottoms",
+    "image_url": "https://images.unsplash.com/photo-1714143136372-ddaf8b606da7?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "cotton-stretch"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-jeans-009-30-indigo",
+        "size": "30",
+        "color": "indigo",
+        "price": 64.0,
+        "stock": 20
+      },
+      {
+        "external_item_id": "sku-jeans-009-32-indigo",
+        "size": "32",
+        "color": "indigo",
+        "price": 64.0,
+        "stock": 16
+      },
+      {
+        "external_item_id": "sku-jeans-009-34-indigo",
+        "size": "34",
+        "color": "indigo",
+        "price": 64.0,
+        "stock": 7
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-pants-010",
+    "title": "Cargo Utility Pants",
+    "description": "Relaxed-fit cargo pants with multiple pockets, durable and practical.",
+    "category": "bottoms",
+    "image_url": "https://images.pexels.com/photos/16983209/pexels-photo-16983209.jpeg",
+    "attributes": {
+      "material": "cotton-twill"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-pants-010-32-olive",
+        "size": "32",
+        "color": "olive",
+        "price": 74.0,
+        "stock": 9
+      },
+      {
+        "external_item_id": "sku-pants-010-34-olive",
+        "size": "34",
+        "color": "olive",
+        "price": 74.0,
+        "stock": 6
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-tshirt-003",
+    "title": "Basic Cotton Crew Tee",
+    "description": "A soft, everyday cotton crew-neck t-shirt in classic colors.",
+    "category": "tops",
+    "image_url": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "cotton"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-tshirt-003-s-white",
+        "size": "S",
+        "color": "white",
+        "price": 19.99,
+        "stock": 25
+      },
+      {
+        "external_item_id": "sku-tshirt-003-m-black",
+        "size": "M",
+        "color": "black",
+        "price": 19.99,
+        "stock": 30
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-shirt-011",
+    "title": "Flannel Button-Down Shirt",
+    "description": "A soft brushed-flannel button-down in a classic plaid, warm and casual.",
+    "category": "tops",
+    "image_url": "https://images.unsplash.com/photo-1613332658633-551aef234b70?w=400&h=400&fit=crop",
+    "attributes": {
+      "season": "fall",
+      "material": "flannel"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-shirt-011-m-red-plaid",
+        "size": "M",
+        "color": "red plaid",
+        "price": 44.0,
+        "stock": 13
+      },
+      {
+        "external_item_id": "sku-shirt-011-l-red-plaid",
+        "size": "L",
+        "color": "red plaid",
+        "price": 44.0,
+        "stock": 9
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-blouse-012",
+    "title": "Silk Blouse",
+    "description": "A lightweight silk blouse with a relaxed fit, polished enough for the office.",
+    "category": "tops",
+    "image_url": "https://images.unsplash.com/photo-1718278864585-3c962e452710?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "silk"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-blouse-012-s-cream",
+        "size": "S",
+        "color": "cream",
+        "price": 68.0,
+        "stock": 8
+      },
+      {
+        "external_item_id": "sku-blouse-012-m-cream",
+        "size": "M",
+        "color": "cream",
+        "price": 68.0,
+        "stock": 5
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-sneakers-004",
+    "title": "Classic Canvas Sneakers",
+    "description": "Low-top canvas sneakers with a rubber sole, casual everyday wear.",
+    "category": "footwear",
+    "image_url": "https://images.unsplash.com/photo-1758646483134-1a5cbc9aa349?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "canvas"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-sneakers-004-9-white",
+        "size": "9",
+        "color": "white",
+        "price": 54.0,
+        "stock": 15
+      },
+      {
+        "external_item_id": "sku-sneakers-004-10-white",
+        "size": "10",
+        "color": "white",
+        "price": 54.0,
+        "stock": 9
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-boots-013",
+    "title": "Leather Chelsea Boots",
+    "description": "Sleek leather Chelsea boots with an elastic side panel, versatile for any outfit.",
+    "category": "footwear",
+    "image_url": "https://images.unsplash.com/photo-1777987601423-f350ac29b3e9?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "leather"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-boots-013-9-brown",
+        "size": "9",
+        "color": "brown",
+        "price": 138.0,
+        "stock": 7
+      },
+      {
+        "external_item_id": "sku-boots-013-10-brown",
+        "size": "10",
+        "color": "brown",
+        "price": 138.0,
+        "stock": 5
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-dress-005",
+    "title": "Floral Wrap Dress",
+    "description": "A lightweight floral wrap dress, flattering fit, great for spring and summer.",
+    "category": "dresses",
+    "image_url": "https://images.unsplash.com/photo-1502868354157-ec2edd2a1651?w=400&h=400&fit=crop",
+    "attributes": {
+      "season": "spring"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-dress-005-s-floral",
+        "size": "S",
+        "color": "floral",
+        "price": 74.0,
+        "stock": 6
+      },
+      {
+        "external_item_id": "sku-dress-005-m-floral",
+        "size": "M",
+        "color": "floral",
+        "price": 74.0,
+        "stock": 4
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-dress-014",
+    "title": "Little Black Dress",
+    "description": "A timeless fitted black dress, easy to dress up or down for any occasion.",
+    "category": "dresses",
+    "image_url": "https://images.unsplash.com/photo-1780765467127-5073b05d28c1?w=400&h=400&fit=crop",
+    "attributes": {},
+    "items": [
+      {
+        "external_item_id": "sku-dress-014-s-black",
+        "size": "S",
+        "color": "black",
+        "price": 98.0,
+        "stock": 10
+      },
+      {
+        "external_item_id": "sku-dress-014-m-black",
+        "size": "M",
+        "color": "black",
+        "price": 98.0,
+        "stock": 6
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-scarf-006",
+    "title": "Wool Knit Scarf",
+    "description": "A chunky wool knit scarf, warm and cozy for cold winter days.",
+    "category": "accessories",
+    "image_url": "https://images.unsplash.com/photo-1737043818804-5b2654929779?w=400&h=400&fit=crop",
+    "attributes": {
+      "season": "winter",
+      "material": "wool"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-scarf-006-onesize-gray",
+        "size": "one-size",
+        "color": "gray",
+        "price": 29.99,
+        "stock": 20
+      }
+    ]
+  },
+  {
+    "external_product_id": "sku-bag-015",
+    "title": "Leather Crossbody Bag",
+    "description": "A compact leather crossbody bag with an adjustable strap, fits the everyday essentials.",
+    "category": "accessories",
+    "image_url": "https://images.unsplash.com/photo-1760624294699-3d3156314391?w=400&h=400&fit=crop",
+    "attributes": {
+      "material": "leather"
+    },
+    "items": [
+      {
+        "external_item_id": "sku-bag-015-onesize-tan",
+        "size": "one-size",
+        "color": "tan",
+        "price": 84.0,
+        "stock": 11
+      }
+    ]
+  }
+]
