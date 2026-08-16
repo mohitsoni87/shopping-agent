@@ -1,8 +1,12 @@
+import logging
+
 from sqlalchemy.orm import Session
 
 from shopping_agent_common.product_types import Gender
 from shopping_agent_common.repositories import ItemFilters, ItemRepository, ProductRepository
 from shopping_agent_common.search.schemas import ItemMatch, ProductMatch, SearchPage
+
+logger = logging.getLogger(__name__)
 
 
 class SearchService:
@@ -64,4 +68,16 @@ class SearchService:
                     items=item_matches,
                 )
             )
+        logger.debug(
+            "search_products tenant_id=%s env=%s category=%s gender=%s offset=%d limit=%d "
+            "match_count=%d has_more=%s",
+            tenant_id,
+            env,
+            category,
+            gender,
+            offset,
+            limit,
+            len(matches),
+            has_more,
+        )
         return SearchPage(matches=matches, offset=offset, limit=limit, has_more=has_more)

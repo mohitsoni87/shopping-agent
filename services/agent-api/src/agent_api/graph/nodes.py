@@ -1,3 +1,5 @@
+import logging
+
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import SystemMessage
 from shopping_agent_common.db import get_session
@@ -7,6 +9,8 @@ from agent_api.core import get_agent_settings
 from agent_api.graph.prompts import AGENT_SYSTEM_PROMPT
 from agent_api.graph.state import AgentState
 from agent_api.graph.tools import search_products
+
+logger = logging.getLogger(__name__)
 
 _settings = get_agent_settings()
 _llm = ChatAnthropic(model=_settings.claude_model, api_key=_settings.anthropic_api_key)
@@ -20,4 +24,12 @@ def agent_node(state: AgentState) -> dict:
 
     system_message = SystemMessage(content=AGENT_SYSTEM_PROMPT.format(categories=categories_text))
     response = _llm_with_tools.invoke([system_message, *state["messages"]])
+
+    tool_names = [call["name"] for call in response.tool_calls]
+    logger.info(
+        "agent.turn tenant_id=%s env=%s tool_calls=%s",
+        state["tenant_id"],
+        state["env"],
+        tool_names or "none",
+    )
     return {"messages": [response]}

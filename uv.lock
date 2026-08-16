@@ -1967,6 +1967,7 @@ name = "shopping-agent-common"
 version = "0.1.0"
 source = { editable = "libs/common" }
 dependencies = [
+    { name = "fastapi" },
     { name = "pgvector" },
     { name = "psycopg", extra = ["binary"] },
     { name = "pydantic" },
@@ -1977,6 +1978,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fastapi", specifier = ">=0.115" },
     { name = "pgvector", specifier = ">=0.3.6" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.2" },
     { name = "pydantic", specifier = ">=2.9" },

@@ -1,4 +1,4 @@
-from sqlalchemy import ColumnElement, or_, select
+from sqlalchemy import ColumnElement, select
 from sqlalchemy.orm import Session
 
 from shopping_agent_common.db.models import Product
@@ -62,11 +62,9 @@ class ProductRepository:
         if category:
             stmt = stmt.where(Product.category == category)
         if gender:
-            # A gendered request also matches unisex and not-yet-tagged
-            # products - it only excludes products explicitly tagged for the
-            # *other* gender.
-            stmt = stmt.where(
-                or_(Product.gender == gender, Product.gender == "unisex", Product.gender.is_(None))
-            )
+            # An explicit gender in the request is a strict filter - only
+            # products tagged for that exact gender match, excluding unisex
+            # and not-yet-tagged products.
+            stmt = stmt.where(Product.gender == gender)
         stmt = stmt.order_by(distance).offset(offset).limit(limit)
         return list(self._session.execute(stmt).scalars().all())

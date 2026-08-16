@@ -49,7 +49,7 @@ docker compose up -d --build
 
 uv sync
 DATABASE_URL="postgresql+psycopg://postgres:postgres@localhost:5433/shopping_agent" \
-  uv run python scripts/seed/seed.py scripts/seed/sample_catalog.json --tenant-id demo --env dev
+  uv run python scripts/seed/cli.py scripts/seed/sample_catalog.json --tenant-id demo --env dev
 ```
 
 Open **http://localhost:5173** and ask for something, e.g. "find me a red jacket for fall."

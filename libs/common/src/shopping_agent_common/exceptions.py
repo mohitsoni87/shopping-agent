@@ -10,3 +10,13 @@ class ProductNotFoundError(ShoppingAgentError):
         super().__init__(
             f"product '{external_product_id}' not found for tenant={tenant_id} env={env}"
         )
+
+
+class EmbeddingError(ShoppingAgentError):
+    """Raised when the embedding provider (Voyage) fails - network error, rate
+    limit, auth failure, etc. Wraps the underlying provider exception so
+    callers depend on our own error type, not a third-party SDK's."""
+
+    def __init__(self, message: str, *, cause: Exception):
+        self.cause = cause
+        super().__init__(message)

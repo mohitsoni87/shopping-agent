@@ -1,3 +1,4 @@
+import logging
 from typing import Annotated
 
 from langchain_core.messages import ToolMessage
@@ -7,12 +8,15 @@ from langgraph.types import Command
 from pydantic import Field
 from shopping_agent_common.db import get_session
 from shopping_agent_common.embeddings import get_embedding_client
+from shopping_agent_common.exceptions import EmbeddingError
 from shopping_agent_common.product_types import Gender
 from shopping_agent_common.repositories import ItemFilters
 from shopping_agent_common.search import SearchService
 
 from agent_api.core import SearchSession, get_agent_settings, get_search_session_store
 from agent_api.serializers import serialize_product_matches
+
+logger = logging.getLogger(__name__)
 
 _settings = get_agent_settings()
 
@@ -55,8 +59,32 @@ def search_products(
     """Search the tenant's product catalog for items matching the shopper's request. Call
     this whenever the shopper is asking to find, browse, or search for a product - do NOT
     call this for greetings, thanks, or unrelated chit-chat."""
+    logger.info(
+        "tool.search_products tenant_id=%s env=%s semantic_query=%r size=%s color=%s "
+        "category=%s gender=%s price_min=%s price_max=%s",
+        tenant_id,
+        env,
+        semantic_query,
+        size,
+        color,
+        category,
+        gender,
+        price_min,
+        price_max,
+    )
+
+    try:
+        query_embedding = get_embedding_client().embed_query(semantic_query)
+    except EmbeddingError:
+        logger.error("tool.search_products embedding_failed tenant_id=%s env=%s", tenant_id, env)
+        tool_message = ToolMessage(
+            content="Product search is temporarily unavailable (embedding service error). "
+            "Tell the shopper to try again in a moment. Do not call this tool again this turn.",
+            tool_call_id=tool_call_id,
+        )
+        return Command(update={"messages": [tool_message]})
+
     item_filters = ItemFilters(size=size, color=color, price_min=price_min, price_max=price_max)
-    query_embedding = get_embedding_client().embed_query(semantic_query)
 
     with get_session() as session:
         page = SearchService(session).search_products(
@@ -79,6 +107,14 @@ def search_products(
             category=category,
             gender=gender,
         )
+    )
+
+    logger.info(
+        "tool.search_products completed tenant_id=%s env=%s result_count=%d has_more=%s",
+        tenant_id,
+        env,
+        len(results),
+        page.has_more,
     )
 
     tool_message = ToolMessage(

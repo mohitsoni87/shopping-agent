@@ -4,7 +4,7 @@
     "title": "Wool-Blend Field Jacket",
     "description": "A warm red wool-blend jacket with a corduroy collar, built for crisp fall weather.",
     "category": "outerwear",
-    "gender": "unisex",
+    "gender": "men",
     "image_url": "https://images.unsplash.com/photo-1639835648750-c1d6ad50c6a9?w=400&h=400&fit=crop",
     "attributes": {
       "season": "fall",
@@ -39,7 +39,7 @@
     "title": "Quilted Puffer Jacket",
     "description": "A lightweight quilted puffer jacket with a packable hood, ideal for cold winter days.",
     "category": "outerwear",
-    "gender": "unisex",
+    "gender": "men",
     "image_url": "https://images.pexels.com/photos/8170867/pexels-photo-8170867.jpeg",
     "attributes": {
       "season": "winter",
@@ -67,7 +67,7 @@
     "title": "Denim Trucker Jacket",
     "description": "A classic denim trucker jacket with button front, a year-round layering staple.",
     "category": "outerwear",
-    "gender": "unisex",
+    "gender": "men",
     "image_url": "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?w=400&h=400&fit=crop",
     "attributes": {
       "material": "denim"
@@ -155,7 +155,7 @@
     "title": "Cargo Utility Pants",
     "description": "Relaxed-fit cargo pants with multiple pockets, durable and practical.",
     "category": "bottoms",
-    "gender": "unisex",
+    "gender": "men",
     "image_url": "https://images.pexels.com/photos/16983209/pexels-photo-16983209.jpeg",
     "attributes": {
       "material": "cotton-twill"
@@ -182,7 +182,7 @@
     "title": "Basic Cotton Crew Tee",
     "description": "A soft, everyday cotton crew-neck t-shirt in classic colors.",
     "category": "tops",
-    "gender": "unisex",
+    "gender": "men",
     "image_url": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&h=400&fit=crop",
     "attributes": {
       "material": "cotton"
@@ -264,7 +264,7 @@
     "title": "Classic Canvas Sneakers",
     "description": "Low-top canvas sneakers with a rubber sole, casual everyday wear.",
     "category": "footwear",
-    "gender": "unisex",
+    "gender": "men",
     "image_url": "https://images.unsplash.com/photo-1758646483134-1a5cbc9aa349?w=400&h=400&fit=crop",
     "attributes": {
       "material": "canvas"
@@ -291,7 +291,7 @@
     "title": "Leather Chelsea Boots",
     "description": "Sleek leather Chelsea boots with an elastic side panel, versatile for any outfit.",
     "category": "footwear",
-    "gender": "unisex",
+    "gender": "men",
     "image_url": "https://images.unsplash.com/photo-1777987601423-f350ac29b3e9?w=400&h=400&fit=crop",
     "attributes": {
       "material": "leather"
